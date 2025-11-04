@@ -1,0 +1,33 @@
+Algorithme Sentence_Analysis
+
+Variables
+   ch : Caractère
+   longueur, mots, voyelles : Entier
+
+Début
+   longueur ← 0
+   mots ← 1
+   voyelles ← 0
+
+   Ecrire("Entrer une phrase se terminant par un point :")
+   Lire(ch)
+
+   TantQue ch <> '.' Faire
+      longueur ← longueur + 1
+
+      Si ch = ' ' Alors
+         mots ← mots + 1
+      FinSi
+
+      Si ch = 'a' Ou ch = 'e' Ou ch = 'i' Ou ch = 'o' Ou ch = 'u' Ou
+         ch = 'A' Ou ch = 'E' Ou ch = 'I' Ou ch = 'O' Ou ch = 'U' Alors
+         voyelles ← voyelles + 1
+      FinSi
+
+      Lire(ch)
+   FinTantQue
+
+   Ecrire("Longueur de la phrase = ", longueur)
+   Ecrire("Nombre de mots = ", mots)
+   Ecrire("Nombre de voyelles = ", voyelles)
+FinAlgorithme
